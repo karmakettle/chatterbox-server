@@ -28,12 +28,9 @@
         url: app.server,
         type: 'GET',
         contentType: 'application/json',
-        success: function (data) {
-          console.log(data)
-          
+        success: function (data) {          
           app.populateMessages(data)
           app.populateRooms(data)
-        
         },
         error: function (data) {
           console.error('chatterbox: Failed to retrieve');
